@@ -69,3 +69,18 @@
 
 (defmethod render ((component say-hello))
   (<:p "Hello World"))
+
+
+
+;; define the entry point
+(defentry-point "hello.ucw" (:application *ucw-hello-world-app*)
+    ((message "Hello"))
+  ;; display the window component
+  (call 'main-window :body (make-instance 'display-message :message message)))
+
+;;; define the component to display a message
+(defcomponent display-message ()
+  ((message :initarg :message :accessor message :initform "")))
+;; the render of the display-message
+(defmethod render ((component display-message))
+  (<:as-html (message component)))
