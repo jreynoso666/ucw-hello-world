@@ -5,7 +5,8 @@
   :author "Your Name <your.name@example.com>"
   :license "Specify license here"
   :depends-on (#:ucw
-	       #:ucw-core)
+	       #:ucw-core
+	       #:parenscript)
   :serial t
   :components ((:file "package")
                (:file "ucw-hello-world")))
