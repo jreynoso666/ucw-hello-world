@@ -59,7 +59,8 @@
     :javascript '((:src  "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 		  (:src  "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 		  (:src "wwwroot/js/site.js"))
-    :stylesheet '("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    :stylesheet '("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  "wwwroot/css/style.css")
     :body (make-instance 'index)))
 
 (defcomponent index ()
@@ -79,9 +80,9 @@
 			      
 			      (<:button :type "button"
 					:id "button"
-				  :class "btn btn-primary"
-				  :style "margin-top:10px;"
-				  "Set good bye")))))
+					:class "btn btn-primary"
+					:style "margin-top:10px;"
+					"Set good bye")))))
   
   (<:script :type "text/javascript"
 	    "$('#button').click(function() {
@@ -161,3 +162,43 @@
 	 (<:img :src "wwwroot/img/lisp.png"
 		:style "width:100%"
 		:class "img-rounded")))
+
+
+;; define the entry point
+(defentry-point "form.html" (:application *ucw-hello-world-app*)
+    ()
+  ;; display the window component
+  (call-as-window 'main-window
+		  :title "Bootstrap form"
+		  :body (make-instance 'bootstrap-form)))
+
+
+(defcomponent bootstrap-form ()
+  ())
+
+(defmethod render ((component bootstrap-form))
+  (<:div :class "container"
+	 :style "padding:10px;"
+	 (<:h2 :class "color-white" "Example")
+	 (<:div :class "col-md-9 col-md-offset-1"
+		:style ""
+		(<:form :class "form-horizontal"
+			(<:div :class "form-group row"
+			       (<:label :class "col-sm-2 control-label color-white"
+					"Email")
+			       (<:div :class "col-sm-7"
+				      (<:input :type "email"
+					       :class "form-control"
+					       :placeholder "Email")))
+			(<:div :class "form-group"
+			       (<:label :class "col-sm-2 control-label color-white"
+					"Password")
+			       (<:div :class "col-sm-7"
+				      (<:input :type "password"
+					       :class "form-control"
+					       :placeholder "Password")))
+			(<:div :class "form-group"
+			       (<:div :class "col-sm-offset-2 col-sm-10"
+				      (<:button :type "submit"
+						:class "btn btn-default"
+						"Sign in")))))))
