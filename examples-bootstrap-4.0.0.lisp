@@ -12,11 +12,11 @@
   (:default-initargs
       :title "UCW hello world"
     :meta '((:name "viewport" :content "width=device-width, initial-scale=1, shrink-to-fit=no"))
-    :javascript '((:src  "https://code.jquery.com/jquery-3.3.1.min.js")
-		  (:src  "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js")
+    :javascript '((:src  "https://code.jquery.com/jquery-3.4.1.min.js")
+		  (:src  "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
 		  (:src "wwwroot/js/site.js"))
     :stylesheet '("https://use.fontawesome.com/releases/v5.0.12/css/all.css"
-		  "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css")
+		  "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
     :body (make-instance 'pricing)))
 
 (defcomponent pricing ()
@@ -26,7 +26,7 @@
   (<:div :class "container"
 	 (<:h4 :class "text-white text-center mb-2 py-2"
 	       :style "background-color:#2595ff; height:50px;"
-	       "Bootstrap 4.3 Examples")
+	       "Bootstrap 4.4.1 Examples")
 	 (<:div :class "row"
 		(<:div :class "col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4"
 		       (<:div :class "card text-center mb-4"
@@ -107,7 +107,7 @@
   (<:div :class "container"
 	 (<:h4 :class "text-white text-center mb-2 py-2"
 	       :style "background-color:#2595ff; height:50px;"
-	       "Bootstrap 4.3 Components toast")
+	       "Bootstrap 4.4.1 Components toast")
 	 (<:h4 :class "py-3"
 	  "Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.")
    (<:div :class "toast"
