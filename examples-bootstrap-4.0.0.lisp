@@ -112,17 +112,17 @@
 	  "Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.")
    (<:div :class "toast"
 	  :role "alert"
-	  :aria-alive "assertive"
-	  :aria-atomic "true"
-	  :data-autohide "false"
+	  (@ "aria-alive" "assertive"
+			  "aria-atomic" "true"
+			  "data-autohide" "false")
 	  (<:div :class "toast-header"
 		 (<:strong :class "mr-auto"
 			   "Bootstrap ")
 		 (<:small "11 mins ago")
 		 (<:button :class "ml-2 mb-1 close"
-			   :data-dismiss "toast"
-			   :aria-label "Close"
-			   (<:span  :arial-hidden "true"
+			   (@ "data-dismiss" "toast"
+					     "aria-label" "Close")
+			   (<:span  (@ "arial-hidden" "true")
 				    (<:i :class "fa fa-times"))))
 	  (<:div :class "toast-body"
 		 "Hello, world! This is a toast message."))
