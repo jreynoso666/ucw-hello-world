@@ -10,5 +10,6 @@
   :serial t
   :components ((:file "package")
                (:file "ucw-hello-world")
-	       (:file "examples-bootstrap-4.0.0")))
+	       (:file "examples-bootstrap-4.0.0")
+	       (:file "material-examples")))
 
