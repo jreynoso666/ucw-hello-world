@@ -66,3 +66,19 @@ systemctl restart apache2
 (in-package :ucw-hello-world)
 
 (start-app :backend :mod-lisp)
+
+
+* Bootstrap examples
+
+You can open the URL in order to see the examples.
+
+
+http://localhost/examples/pricing
+
+http://localhost/components/toasts
+
+* Material design example
+
+You can open the URL in order to see the example.
+
+http://localhost/material/drawer
