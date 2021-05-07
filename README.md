@@ -25,6 +25,8 @@ http://localhost:8080/examples/pricing
 
 http://localhost:8080/components/toasts
 
+http://localhost:8080/bootstrap5/form/floating-labels
+
 * Material design example
 
 You can open the URL in order to see the example.
@@ -76,6 +78,9 @@ You can open the URL in order to see the examples.
 http://localhost/examples/pricing
 
 http://localhost/components/toasts
+
+http://localhost/bootstrap5/form/floating-labels
+
 
 * Material design example
 
