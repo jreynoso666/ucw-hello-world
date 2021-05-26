@@ -27,6 +27,12 @@ http://localhost:8080/components/toasts
 
 http://localhost:8080/bootstrap5/form/floating-labels
 
+
+* Websockets example
+
+http://localhost:8080/portal-websockets
+
+
 * Material design example
 
 You can open the URL in order to see the example.
